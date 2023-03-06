@@ -1,0 +1,48 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.tariff-card {
+  margin: 0.5em;
+}
+
+.tariff-card_selected {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* transform: scale(1.05); */
+}
+
+.card-header {
+  padding: 1.5em 0.5em;
+  border-bottom: 1px solid whitesmoke;
+  /* color: white; */
+}
+
+.card-price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* color: white; */
+  padding: 1em 0;
+}
+
+.card-currency {
+  align-self: flex-start;
+}
+
+.card-price {
+  font-size: 2em;
+  margin: 0;
+}
+
+.card-speed {
+  padding: 1.3em;
+}
+
+.card-footer {
+  padding: 1em;
+  background-color: rgb(232, 228, 228);
+  color: grey;
+}
