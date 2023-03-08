@@ -2,23 +2,20 @@ import React from "react";
 
 const moreInfo = "Объём включённого трафика не ограничен";
 
-function Tariffcard(props) {
+export default function Tariffcard(props) {
+  const classCard = props.isSelected ? "tariff-card_selected" : "";
   return (
-    <div className={props.isSelected ? "tariff-card_selected" : "tariff-card"}>
-      <div className="card-header">
-        <h2>Безлимитный {props.price}</h2>
+    <div className={`card ${classCard}`}>
+      <div className={`card-header ${props.theme.card_header}`}>
+        Безлимитный {props.price}
       </div>
-      <div className="card-main">
-        <section className="card-price">
-          <p className="card-currency">руб</p>
-          <p className="card-price">{props.price}</p>
-          <p className="card-date">/мес</p>
-        </section>
-        <section className="card-speed">до {props.speed} Мбит/сек.</section>
+      <div className={`card-price ${props.theme.card_price}`}>
+        <p className="card-currency">руб</p>
+        <p className="card-price">{props.price}</p>
+        <p className="card-date">/мес</p>
       </div>
+      <div className="card-speed">до {props.speed}Мбит/сек</div>
       <div className="card-footer">{moreInfo}</div>
     </div>
   );
 }
-
-export default Tariffcard;

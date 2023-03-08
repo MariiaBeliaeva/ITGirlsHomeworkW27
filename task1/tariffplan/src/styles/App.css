@@ -11,20 +11,20 @@
 
 .tariff-card_selected {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  /* transform: scale(1.05); */
+  transform: scale(1.05);
 }
 
 .card-header {
   padding: 1.5em 0.5em;
   border-bottom: 1px solid whitesmoke;
-  /* color: white; */
+  color: white;
 }
 
 .card-price {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* color: white; */
+  color: white;
   padding: 1em 0;
 }
 
