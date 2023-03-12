@@ -5,7 +5,7 @@ const moreInfo = "Объём включённого трафика не огра
 export default function Tariffcard(props) {
   const classCard = props.isSelected ? "tariff-card_selected" : "";
   return (
-    <div className={`card ${classCard}`}>
+    <div className={`card ${classCard}`} onClick={props.onClick}>
       <div className={`card-header ${props.theme.card_header}`}>
         Безлимитный {props.price}
       </div>

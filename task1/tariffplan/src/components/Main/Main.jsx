@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Tariffcard from "../Tariffcard/Tariffcard";
 import theme1 from "../../styles/Theme1.module.css";
 import theme2 from "../../styles/Theme2.module.css";
@@ -8,6 +8,12 @@ import { tariffs } from "./Tariffs.js";
 
 function Main(props) {
   const themes = [theme1, theme2, theme3, theme4];
+  const [selected, setSelected] = useState(false);
+
+  const handleChange = () => {
+    setSelected(!selected);
+  };
+
   return (
     <main className="container">
       {tariffs.map((tariffs, i) => (
@@ -16,7 +22,8 @@ function Main(props) {
           price={tariffs.price}
           speed={tariffs.speed}
           theme={themes[i]}
-          isSelected={tariffs.isSelected}
+          selected={selected === i}
+          onClick={handleChange}
         />
       ))}
     </main>
